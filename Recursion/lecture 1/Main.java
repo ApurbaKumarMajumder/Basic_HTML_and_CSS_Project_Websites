@@ -7,9 +7,10 @@ public class Main {
         // write your code here
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        printDecreasing(n);
-        printIncreasing(n);
-        pdi(n);
+        // printDecreasing(n);
+        // printIncreasing(n);
+        // pdi(n);
+        System.out.println(factorial(n));
     }
 
     public static void printIncreasing(int n){
@@ -38,5 +39,13 @@ public class Main {
         System.out.println(n);
         pdi(n-1);
         System.out.println(n);
+    }
+
+    public static int factorial(int n){
+        // if(n == 0) return 1;
+
+        if(n == 1) return 1;
+
+        return n * factorial(n-1);
     }
 }
