@@ -7,8 +7,9 @@ public class Main {
         // write your code here
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        // printIncreasing(n);
         printDecreasing(n);
+        printIncreasing(n);
+        pdi(n);
     }
 
     public static void printIncreasing(int n){
@@ -26,5 +27,16 @@ public class Main {
         System.out.println(n);
         // faith
         printDecreasing(n - 1);
+        // 1:8mins
+    }
+
+    public static void pdi(int n){
+        if (n == 0) {
+            return;
+        }
+
+        System.out.println(n);
+        pdi(n-1);
+        System.out.println(n);
     }
 }
