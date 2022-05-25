@@ -1,4 +1,4 @@
-import java.io.*;
+// import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -6,11 +6,13 @@ public class Main {
     public static void main(String[] args) throws Exception {
         // write your code here
         Scanner scn = new Scanner(System.in);
+        int x = scn.nextInt();
         int n = scn.nextInt();
         // printDecreasing(n);
         // printIncreasing(n);
         // pdi(n);
-        System.out.println(factorial(n));
+        // System.out.println(factorial(n));
+        System.out.println(power(x, n));
     }
 
     public static void printIncreasing(int n){
@@ -47,5 +49,16 @@ public class Main {
         if(n == 1) return 1;
 
         return n * factorial(n-1);
+    }
+
+    public static int power(int x, int n){
+        if(n == 0){
+            return 1;
+        }
+        if(n == 1){
+            return x;
+        }
+
+        return x * power(x, n-1);
     }
 }
