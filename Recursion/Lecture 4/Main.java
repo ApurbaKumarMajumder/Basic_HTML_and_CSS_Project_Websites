@@ -8,10 +8,13 @@ public class Main {
         // String str = scn.nextLine();
         // ArrayList<String> res = gss(str);
         // System.out.println(res);
-        int n = scn.nextInt();
-        ArrayList<String> res = getStairPaths(n);
-        System.out.println(res);
-
+        // int n = scn.nextInt();
+        // ArrayList<String> res = getStairPaths(n);
+        // System.out.println(res);
+        int dr = scn.nextInt();
+        int dc = scn.nextInt();
+        ArrayList<String> ans = getMazePaths(0, 0, dr - 1, dc - 1);
+        System.out.println(ans);
     }
 
     public static ArrayList<String> gss(String str) {
@@ -74,5 +77,32 @@ public class Main {
         }
 
         return myPath;
+    }
+
+    public static ArrayList<String> getMazePaths(int sr, int sc, int dr, int dc) {
+        // This is a reactive code
+        if(sr > dr || sc > dc){ // invalid
+            ArrayList<String> base = new ArrayList<>();
+            return base;
+        }
+
+        if(sr == dr && sc == dc){ // valid 
+            ArrayList<String> base = new ArrayList<>();
+            base.add("");
+            return base;
+        }
+        
+        ArrayList<String> hpath = getMazePaths(sr, sc+1, dr, dc); // vertical
+        ArrayList<String> vpath = getMazePaths(sr+1, sc, dr, dc); // Horizontal
+
+        ArrayList<String> path = new ArrayList<>();
+        for(String p: hpath){
+            path.add('h'+p);
+        }
+        for(String p:vpath){
+            path.add('v'+p);
+        }
+
+        return path;
     }
 }
