@@ -12,7 +12,8 @@ public class Main {
         // printIncreasing(n);
         // pdi(n);
         // System.out.println(factorial(n));
-        System.out.println(power(x, n));
+        // System.out.println(power(x, n));
+        System.out.println(exponentialPower(x, n));
     }
 
     public static void printIncreasing(int n){
@@ -60,5 +61,21 @@ public class Main {
         }
 
         return x * power(x, n-1);
+    }
+
+    public static int exponentialPower(int x, int n){
+        if(n == 0){
+            return 1;
+        }
+        if(n == 1){
+            return x;
+        }
+
+        int xPowNBy2 = power(x, n/2);
+        int ans = xPowNBy2 * xPowNBy2;
+        if(n%2 == 1){
+            ans = ans * x;
+        }
+        return ans;
     }
 }
