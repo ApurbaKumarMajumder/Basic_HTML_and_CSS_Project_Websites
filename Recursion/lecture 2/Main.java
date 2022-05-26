@@ -21,5 +21,5 @@ public class Main {
         System.out.println(n+"["+scr+"->"+dest+"]");
         toh(n-1, helper, dest, scr);
     }
-// 41
+// 1:17
 }
