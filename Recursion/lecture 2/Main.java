@@ -7,10 +7,11 @@ public class Main {
         // write your code here
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        int scr = scn.nextInt();
-        int dest = scn.nextInt();
-        int helper = scn.nextInt();
-        toh(n, scr, dest, helper);
+        // int scr = scn.nextInt();
+        // int dest = scn.nextInt();
+        // int helper = scn.nextInt();
+        // toh(n, scr, dest, helper);
+        pzz(n);
     }
 
     public static void toh(int n, int scr, int dest, int helper){
@@ -21,5 +22,19 @@ public class Main {
         System.out.println(n+"["+scr+"->"+dest+"]");
         toh(n-1, helper, dest, scr);
     }
-// 1:17
+
+    public static void pzz(int n){
+        if(n < 1){
+            return;
+        }
+
+        System.out.println("Pre ");
+        System.out.println(n);
+        pzz(n-1);
+        System.out.println("Post ");
+        System.out.println(n);
+        pzz(n-1);
+        System.out.println("Last ");
+        System.out.println(n);
+    }
 }
