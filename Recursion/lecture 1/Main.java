@@ -9,11 +9,11 @@ public class Main {
         int x = scn.nextInt();
         int n = scn.nextInt();
         printDecreasing(n);
-        printIncreasing(n);
-        pdi(n);
-        System.out.println(factorial(n));
-        System.out.println(power(x, n));
-        System.out.println(exponentialPower(x, n));
+        // printIncreasing(n);
+        // pdi(n);
+        // System.out.println(factorial(n));
+        // System.out.println(power(x, n));
+        // System.out.println(exponentialPower(x, n));
     }
 
     public static void printIncreasing(int n){
