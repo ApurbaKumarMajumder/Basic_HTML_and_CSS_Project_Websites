@@ -8,11 +8,11 @@ public class Main {
         Scanner scn = new Scanner(System.in);
         int x = scn.nextInt();
         int n = scn.nextInt();
-        // printDecreasing(n);
-        // printIncreasing(n);
-        // pdi(n);
-        // System.out.println(factorial(n));
-        // System.out.println(power(x, n));
+        printDecreasing(n);
+        printIncreasing(n);
+        pdi(n);
+        System.out.println(factorial(n));
+        System.out.println(power(x, n));
         System.out.println(exponentialPower(x, n));
     }
 
