@@ -15,7 +15,8 @@ public class Main {
         // displayArrReverse3(arr, n-1);
         // System.out.println(maxOfArray(arr, 0));
         int x = scn.nextInt();
-        System.out.println(firstIndex(arr, 0, x));
+        // System.out.println(firstIndex(arr, 0, x));
+        System.out.println(lastIndex(arr, 0, x));
     }
 
     public static void displayArr(int arr[], int idx) {
@@ -78,5 +79,17 @@ public class Main {
         }
 
         return firstIndex(arr, idx+1, x);
+    }
+
+    public static int lastIndex(int[] arr, int idx, int x){
+        if(idx == arr.length){
+            return -1;
+        }
+
+        int rres = lastIndex(arr, idx+1, x);
+        
+        if(rres != -1) return rres;
+        if(arr[idx] == x) return idx;
+        return -1;
     }
 }
