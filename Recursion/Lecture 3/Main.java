@@ -11,7 +11,8 @@ public class Main {
         }
         // displayArr(arr, 0);
         // displayArrReverse(arr, 0);
-        displayArrReverse2(arr, n-1);
+        // displayArrReverse2(arr, n-1);
+        displayArrReverse3(arr, n-1);
     }
 
     public static void displayArr(int arr[], int idx) {
@@ -29,15 +30,21 @@ public class Main {
     }
 
     public static void displayArrReverse2(int[] arr, int idx){
-        // if(idx == 0){
-        //     System.out.println(arr[0]);
-        //     return;
-        // }
         if(idx == -1){
             return;
         }
 
         System.out.println(arr[idx]);
         displayArrReverse2(arr, idx-1);
-    } 
+    }
+
+    public static void displayArrReverse3(int[] arr, int idx){
+        if(idx == 0){
+            System.out.println(arr[0]);
+            return;
+        }
+
+        System.out.println(arr[idx]);
+        displayArrReverse3(arr, idx-1);
+    }
 }
