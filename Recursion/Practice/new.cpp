@@ -15,3 +15,23 @@ long long Pow(int x, int n)
     return result;
 }
 
+// Check Palindrome
+
+bool isPalindromeHelper(int s, int e, string &str){
+    // base case
+    if(s >= e){
+        return true;
+    }
+    
+    if(str[s] != str[e]){
+        return false;
+    }
+    return isPalindromeHelper(s+1, e-1, str);
+}
+
+bool isPalindrome(string &s)
+{
+	// Write your code here.
+    // return the helper function
+    isPalindromeHelper(0, s.size()-1, s);
+}
