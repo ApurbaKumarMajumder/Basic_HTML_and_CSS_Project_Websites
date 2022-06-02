@@ -35,3 +35,24 @@ bool isPalindrome(string &s)
     // return the helper function
     isPalindromeHelper(0, s.size()-1, s);
 }
+
+// Reverse The Array
+
+void reverseArrayHelper(int s, int e, vector<int> &arr){
+    // base condition - 1
+    if(s >= e){
+        return;
+    }
+    
+    // do the small task yourself - 2
+    swap(arr[s], arr[e]);
+    
+    // ask recursion to handle the remaining part for you - 3
+    reverseArrayHelper(s+1, e-1, arr);
+}
+
+void reverseArray(vector<int> &arr , int m)
+{
+	// Write your code here.
+    reverseArrayHelper(m+1, arr.size()-1, arr);
+}
