@@ -92,4 +92,23 @@ public class Main {
         if(arr[idx] == x) return idx;
         return -1;
     }
+
+    public static int[] allIndices(int[] arr, int x, int idx, int fsf) {
+        // write ur code here
+        if(idx == arr.length){
+            return new int[fsf];
+        }
+
+        // if x is found
+        if (arr[idx] == x) {
+            int[] temp = allIndices(arr, x, idx+1, fsf+1);
+            temp[fsf] = idx;
+            return temp;
+        } 
+        
+        // if x is not found
+        else {
+            return allIndices(arr, x, idx+1, fsf);
+        }
+    }
 }
