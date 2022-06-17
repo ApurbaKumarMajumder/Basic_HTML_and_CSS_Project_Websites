@@ -43,7 +43,7 @@ public class Main {
         for(int jumps = 1; jumps <= dc - sc; jumps++){
             ArrayList<String> horizontalMoves = getMazePaths(sr, sc+jumps, dr, dc);
             for (String i : horizontalMoves) {
-                myPath.add('h'+jumps+i);
+                myPath.add("h"+jumps+i);
             }
         }
 
@@ -51,7 +51,7 @@ public class Main {
         for(int jumps = 1; jumps <= dr - sr; jumps++){
             ArrayList<String> verticalMoves = getMazePaths(sr+jumps, sc, dr, dc);
             for (String i : verticalMoves) {
-                myPath.add('v'+jumps+i);
+                myPath.add("v"+jumps+i);
             }
         }
 
@@ -59,7 +59,7 @@ public class Main {
         for(int jumps = 1; jumps <= dc - sc && jumps <= dr - sr; jumps++){
             ArrayList<String> diagonalMoves = getMazePaths(sr+jumps, sc+jumps, dr, dc);
             for (String i : diagonalMoves) {
-                myPath.add('d'+jumps+i);
+                myPath.add("d"+jumps+i);
             }
         }
 
