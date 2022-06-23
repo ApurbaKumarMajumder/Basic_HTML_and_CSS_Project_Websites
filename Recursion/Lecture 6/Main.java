@@ -10,16 +10,29 @@ public class Main {
         // printPermutations(str, "");
 
         // Flood Fill Questions
+        // Scanner scn = new Scanner(System.in);
+        // int n = scn.nextInt();
+        // int m = scn.nextInt();
+        // int[][] arr = new int[n][m];
+        // for (int i = 0; i < n; i++) {
+        //     for (int j = 0; j < m; j++) {
+        //         arr[i][j] = scn.nextInt();
+        //     }
+        // }
+        // floodfill(arr, 0, 0, "");
+
+        // Target Sum Subsets
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        int m = scn.nextInt();
-        int[][] arr = new int[n][m];
+        int[] arr = new int[n];
+
+        // array input
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                arr[i][j] = scn.nextInt();
-            }
+            arr[i] = scn.nextInt();
         }
-        floodfill(arr, 0, 0, "");
+
+        int tar = scn.nextInt();
+        printTargetSumSubsets(arr, 0, "", 0, tar);
     }
 
     public static void printPermutations(String str, String asf) {
@@ -60,5 +73,24 @@ public class Main {
         // right
         floodfill(maze, row, col + 1, asf + "r");
         maze[row][col] = 0;
+    }
+
+    // set is the subset
+    // sos is sum of subset
+    // tar is target
+    public static void printTargetSumSubsets(int[] arr, int idx, String set, int sos, int target) {
+        if(idx == arr.length){
+            if(sos == target){
+                System.out.println(set + ".");
+            }
+            return;
+        }
+
+        if(sos > target){
+            return;
+        }
+
+        printTargetSumSubsets(arr, idx + 1, set + arr[idx] + ", ", sos + arr[idx], target); // yes call
+        printTargetSumSubsets(arr, idx + 1, set, sos, target); // no call
     }
 }
