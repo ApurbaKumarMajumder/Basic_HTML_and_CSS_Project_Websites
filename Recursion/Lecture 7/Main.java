@@ -3,10 +3,14 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
-        int[][] arr = new int[n][n];
-        printNQueens(arr, "", 0);
+        // NQueen Question
+        // Scanner scn = new Scanner(System.in);
+        // int n = scn.nextInt();
+        // int[][] arr = new int[n][n];
+        // printNQueens(arr, "", 0);
+        
+        // Knights Tour
+        
     }
 
     public static boolean isQueenSafe(int[][] arr, int row, int col){
