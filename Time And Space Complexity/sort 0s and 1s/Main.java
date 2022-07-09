@@ -42,19 +42,43 @@ public class Main {
   // method 2 to solve the problem
   // Use two indexes to traverse
   // both i and j starts from 0
+//   public static int[] segregate0sand1s(int[] arr, int size){
+//     int i = 0;
+//     int j = 0;
+//     while(i < size){
+//         if(arr[i] == 1){
+//             i++;
+//         } else if(arr[i] == 0){
+//             swap(arr, i++, j++);
+//         }
+//     }
+//     return arr;
+//   }
 
-  public static int[] segregate0sand1s(int[] arr, int size){
-    int i = 0;
-    int j = 0;
-    while(i < size){
-        if(arr[i] == 1){
-            i++;
-        } else if(arr[i] == 0){
-            swap(arr, i++, j++);
+    // method 3 to solve the problem
+    // Use two indexes to traverse
+    // i = 0 and j = length - 1
+    public static int[] segregate0sand1s(int[] arr, int size){
+        int i = 0;
+        int j = size - 1;
+
+        while(i < j){
+            if(arr[i] == 0){
+                i++;
+            } else if(arr[j] == 1){
+                j--;
+            }
+
+            if(arr[i] == 1){
+                if(arr[j] == 0){
+                    swap(arr, i++, j--);
+                } else if (arr[j] == 1){
+                    j--;
+                }
+            }
         }
+        return arr;
     }
-    return arr;
-  }
 
   // swap function implemented
   public static void swap(int[] arr, int i, int j) {
