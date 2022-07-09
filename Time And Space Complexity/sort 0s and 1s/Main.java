@@ -20,23 +20,48 @@ public class Main {
 
   // Method 1 to solve the problem
   // count the number of 0s and 1s and create a new result array according to that
-  public static int[] segregate0sand1s(int[] arr, int size){
-    int count0 = 0;
-    for (int i = 0; i < arr.length; i++) {
-        if(arr[i] == 0){
-            count0++;
-        }
-    }
+//   public static int[] segregate0sand1s(int[] arr, int size){
+//     int count0 = 0;
+//     for (int i = 0; i < arr.length; i++) {
+//         if(arr[i] == 0){
+//             count0++;
+//         }
+//     }
 
-    int[] result = new int[size];
-    for (int i = 0; i < result.length; i++) {
-        if(i < count0){
-            result[i] = 0;
-        } else {
-            result[i] = 1;
+//     int[] result = new int[size];
+//     for (int i = 0; i < result.length; i++) {
+//         if(i < count0){
+//             result[i] = 0;
+//         } else {
+//             result[i] = 1;
+//         }
+//     }
+//     return result;
+//   }
+
+  // method 2 to solve the problem
+  // Use two indexes to traverse
+  // both i and j starts from 0
+
+  public static int[] segregate0sand1s(int[] arr, int size){
+    int i = 0;
+    int j = 0;
+    while(i < size){
+        if(arr[i] == 1){
+            i++;
+        } else if(arr[i] == 0){
+            swap(arr, i++, j++);
         }
     }
-    return result;
+    return arr;
+  }
+
+  // swap function implemented
+  public static void swap(int[] arr, int i, int j) {
+    System.out.println("Swapping " + arr[i] + " and " + arr[j]);
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
   }
 
   // function to print array
