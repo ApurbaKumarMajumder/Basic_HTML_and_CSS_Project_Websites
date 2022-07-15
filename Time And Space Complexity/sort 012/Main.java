@@ -21,36 +21,21 @@ public class Main {
   }
 
     public static int[] segregate012(int[] arr, int size){
-        int i = 0;
-        int j = 0;
-        int k = arr.length - 1;
+        int low = 0;
+        int mid = 0;
+        int high = arr.length - 1;
 
-        // for (int i = 0; i < arr.length; i++) {
-        //   if(arr[mid] == 0){
-        //     swap(arr, low++, mid++);
-        //   } else if(arr[mid] == 1){
-        //     mid++;
-        //   } else if(arr[mid] == 2){
-        //     swap(arr, high--, mid++);
-        //   }
-        // }
-        while(i<=k)
-        {
-          if(arr[i]==0)
-          {
-            swap(arr, i, j);
-            i++;
-            j++;
-
-          }
-          else if(arr[i]==1)
-          i++;
-          else{
-            swap(arr, i, k);
-            k--;
+        while(mid <= high) {
+          if(arr[mid] == 0){
+            swap(arr, low++, mid++);
+          } 
+          else if(arr[mid] == 2){
+            swap(arr, high--, mid++);
+          } else {
+            mid++;
           }
         }
-
+        
         return arr;
     }
 
