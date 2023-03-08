@@ -16,6 +16,11 @@ body {
     overflow: hidden;
 }
 
+.container p {
+    margin-top: 30px;
+    text-align: end;
+}
+
 .header {
     margin-top: 100px;
     display: flex;
@@ -36,11 +41,38 @@ img {
     font-size: 70px;
     font-weight: bold;
     color: #1d1e4c;
-    /* text-transform: uppercase; */
 }
 
 .header-right-section p {
     font-size: 30px;
     text-align: end;
     font-weight: bold;
+}
+
+/* hero section */
+.hero-section {
+    margin-top: 100px;
+}
+
+.hero-section h1 {
+    font-size: 40px;
+}
+
+.hero-section p {
+    margin-top: 20px;
+    font-size: 19px;
+}
+
+.hero-section p span {
+    font-weight: bold;
+}
+
+/* biographies section */
+
+.biographies {
+    margin-top: 100px;
+}
+
+.biographies div ul li{
+    list-style: circle;
 }
