@@ -15,3 +15,32 @@ body {
     margin-inline: auto;
     overflow: hidden;
 }
+
+.header {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header-left-section {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img {
+    height: 300px;
+    width: 320px;
+}
+.header-right-section h1 {
+    font-size: 70px;
+    font-weight: bold;
+    color: #1d1e4c;
+    /* text-transform: uppercase; */
+}
+
+.header-right-section p {
+    font-size: 30px;
+    text-align: end;
+    font-weight: bold;
+}
