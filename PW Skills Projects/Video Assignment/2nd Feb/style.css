@@ -67,3 +67,9 @@ main {
     margin-top: 20px;
 } */
 
+.leftmain {
+    justify-content:flex-end;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: ;
+}
