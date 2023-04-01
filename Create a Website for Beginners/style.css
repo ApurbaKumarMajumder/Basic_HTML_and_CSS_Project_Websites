@@ -94,4 +94,31 @@ html, body {
     float: left;
     height: 200px;
     width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.main-footer {
+    background-color: #56ccf2;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 0.5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
 }
