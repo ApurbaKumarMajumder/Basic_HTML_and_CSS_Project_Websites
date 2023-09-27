@@ -18,25 +18,27 @@ html, body {
   border-radius: 50%;
   position: fixed;
   z-index: 99;
+  /* transition: all linear 0.1s; */
 }
 
 #cursor-blur {
   height: 500px;
   width: 500px;
-  background-color: #96c11e2b;
+  background-color: rgba(150, 193, 30, 0.3);
   border-radius: 50%;
   position: fixed;
-  filter: blur(40px);
+  filter: blur(80px);
   z-index: 9;
+  transition: all linear 0.4s;
 }
 
 #nav {
-  height: 145px;
+  height: 135px;
   width: 100%;
   /* background-color: red; */
   display: flex;
   align-items: center;
-  padding: 0 150px;
+  padding: 0 120px;
   position: fixed;
   /* justify-content: space-between; */
   gap: 50px;
