@@ -332,3 +332,28 @@ video {
   bottom: 30%;
   right: 15%;
 }
+
+#page4 {
+  height: 50vh;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.element {
+  height: 70%;
+  width: 20%;
+  overflow: hidden;
+}
+
+.element h2 {
+  height: 100%;
+  width: 100%;
+  background-color: #95C11E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
