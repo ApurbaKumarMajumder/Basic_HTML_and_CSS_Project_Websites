@@ -9,6 +9,7 @@
 html, body {
   height: 100%;
   width: 100%;
+  perspective: 800;
 }
 
 #cursor {
@@ -219,6 +220,8 @@ video {
   background-size: cover;
   background-position: center;
   /* object-fit: cover; */
+  overflow: hidden;
+  transition: all ease 0.6s;
 }
 
 #card1 {
@@ -234,4 +237,64 @@ video {
 #card3 {
   background-image: url(Resources/lessonSection/3.avif);
   /* object-fit: cover; */
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #95C11E;
+  padding: 30px;
+  padding-top: 160px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+
+.overlay h4 {
+  color: #000;
+  font-size: 40px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.overlay p{
+  color: #000;
+  font-size: 18px;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+#green-div{
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to left bottom, #119f3a, #ace022);
+}
+
+#green-div h4 {
+  width: 45%;
+  font-size: 27px;
+  color: #000;
+  line-height: 50px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#green-div img {
+  height: 100%;
+  object-fit: cover;
+  width: 14%;
 }
