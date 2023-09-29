@@ -334,19 +334,23 @@ video {
 }
 
 #page4 {
-  height: 50vh;
+  height: 30vh;
   width: 100%;
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 70px;
+  position: relative;
 }
 
 .element {
+  /* height: 40%; */
   height: 70%;
-  width: 20%;
+  width: 26%;
   overflow: hidden;
+  border-radius: 20px;
+  position: relative;
 }
 
 .element h2 {
@@ -354,6 +358,40 @@ video {
   width: 100%;
   background-color: #95C11E;
   display: flex;
+  color: #000;
+  font-weight: 800;
+  transition: all ease 0.5s;
   align-items: center;
   justify-content: center;
+  font-size: 40px;
+  position: absolute;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+.element img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.1;
+}
+
+.element:hover h2{
+  color: #fff;
+  background-color: transparent;
+}
+
+.element:hover img{
+  scale: 1;
+}
+
+#page4 h1 {
+  position: absolute;
+  font-size: 112px;
+  top: -15%;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: gilroy;
+  color: #000;
+  -webkit-text-stroke: 2px white;
 }
