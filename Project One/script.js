@@ -64,7 +64,7 @@ gsap.from("#about-us img, #about-us-in", {
 
 gsap.from(".card", {
   scale: 0.8,
-  opacity: 0,
+  // opacity: 0,
   duration: 1,
   stagger: 0.1,
   scrollTrigger: {
@@ -101,7 +101,7 @@ gsap.from("#colon2", {
     end: "top 45%",
     scrub: 4
   }
-})
+});
 
 gsap.from("#page4, h1", {
   y: 50,
