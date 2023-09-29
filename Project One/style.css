@@ -6,10 +6,26 @@
   color: #fff;
 }
 
+*::selection {
+  background-color: #95C11E;
+  color: white;
+}
+
 html, body {
   height: 100%;
   width: 100%;
   perspective: 800;
+}
+
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background-color: #95C11E;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 50px;
 }
 
 #cursor {
@@ -110,6 +126,7 @@ video {
   font-size: 140px;
   font-weight: 900;
   position: relative;
+  margin-bottom: 30px;
 }
 
 #page1 h1::before {
@@ -428,5 +445,55 @@ video {
 #footer {
   height: 40vh;
   width: 100%;
-  background: linear-gradient(to left bottom, #119F3A, #ACE022);
+  background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6.5vw;
+  padding: 0 100px;
+}
+#footer > img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+}
+#f1 img {
+  height: 100px;
+}
+#f1,
+#f2,
+#f3,
+#f4 {
+  width: fit-content;
+  position: relative;
+  z-index: 99;
+  /* background-color: red; */
+}
+#f2 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+#f3 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+#f4 h4 {
+  font-size: 1vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 8px;
 }
